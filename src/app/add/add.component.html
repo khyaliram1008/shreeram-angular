@@ -1,0 +1,12 @@
+<p>add works!</p>
+<form [formGroup]="userForm" (ngSubmit)="submit()">
+    <div>
+        <label>Name:</label>
+        <input type="text"   class="form-name" placeholder="name" name="name" [formControlName]="'name'"/>
+    </div>
+    <div>
+        <label>emailid:</label>
+        <input type="email" class="form-name"   placeholder="email" name="emailid" [formControlName]="'emailid'"/>
+    </div>
+<button type="submit">submit</button>
+</form>

@@ -1,0 +1,23 @@
+<p>read works!</p>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th> sr.</th>
+                <th>Name</th>
+                <th>emailid</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of list;index as i">
+                <!-- <td>{{i+1}}</td> -->
+                <th scope="row">{{i+1}}</th>
+                <td>{{item?.name}}</td>
+                <td>{{item?.emailid}}</td>
+                <td>
+                    <i class="fa fa-trash"  style="font-size:30px;color:red;" (click)="delete(item.id)"></i>
+                    <i class="fa fa-edit" style="font-size:20px;color:blue;" (click)="edit(item.id)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
